@@ -15,13 +15,15 @@ let pwBtn = document.getElementById('pwBtn').addEventListener('click', () =>
             loadMobile.style.display = 'none';
             displayOn.style.display = 'block';
 
+            dataMobile()
+
             var batery = document.getElementById("batery");
             var bateryChanger = 100;
 
             let bateryProgress = setInterval(() => {
                 bateryChanger--;
                 batery.innerHTML = bateryChanger + '%';
-            }, 3000);
+            }, 10000);
         }, 5000);
 
     }else
@@ -40,8 +42,13 @@ function dataMobile()
     let hm = new Date().getHours();
     let mm = new Date().getMinutes();
 
-    hoursDOM.innerHTML = hm + ':';
-    dataMinutes.innerHTML = mm + ':';
+    mm = (mm < 10 ? '0' + mm : mm);
+    hm = (hm < 10 ? '0' + hm : hm);
+
+    setInterval(() => {
+        hoursDOM.innerHTML = hm + ':';
+        dataMinutes.innerHTML = mm;
+    }, 1000);
 };
 
-displayOn.style.display = 'block';
+// displayOn.style.display = 'block';

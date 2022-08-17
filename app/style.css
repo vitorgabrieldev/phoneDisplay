@@ -14,15 +14,19 @@ body, html
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+
+    background: #d4d4d4;
 }
 .Phone-Container
 {
     position: absolute;
     width: 20.5rem;
-    height: 97%;
+    height: 90%;
     background: #000;
     border-radius: 1.3rem;
     z-index: 99;
+
+    
 }
 
 .buttonPhone-Power
@@ -39,7 +43,6 @@ body, html
     margin-left: 20.5rem;
 
     cursor: pointer;
-    transtion: .3s;
     z-index: 1;
 }
 .display-Phone
@@ -63,7 +66,7 @@ body, html
     width: 100%;
     height: 100%;
 
-    background: url(app/images/wallpaper-mobile.jpg);
+    background: url(/app/images/wallpaper-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -194,4 +197,106 @@ body, html
 .barMobile-rigth h1
 {
     color: #fefefeb0;
+}
+
+/*============================ apps ========================*/
+.mobile-apps-display
+{
+
+    width: 100%;
+    height: calc(100% - 2.7rem);
+    margin-top: 2.7rem;
+
+}
+
+.app-recents
+{
+
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.app-recents i
+{
+
+    font-size: 2rem;
+    color: #fefefe;
+
+    cursor: pointer;
+    transition: .3s;
+
+    background: rgba(0, 0, 0, 0.215);
+    padding: .9rem;
+    border-radius: 1.3rem;
+
+}
+
+.app-recents i:hover
+{
+    
+    color: rgb(215, 215, 215);
+    transform: scale(.9) translateY(15px);
+    
+}
+
+.app-recents i:active
+{
+
+    transform: scale(1.1);
+
+}
+
+.bar-long
+{
+    width: 95%;
+    margin-left: 2.%;
+}
+
+
+
+.more-apps
+{
+
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30rem;
+
+}
+
+.more-apps i 
+{
+    font-size: 2.3rem;
+    color: #fefefe;
+
+    background: rgba(0, 0, 0, 0.215);
+    box-shadow: 0px 0px 10px #fefefe90;
+    padding: 1.5rem;
+    border-radius: 1.3rem;
+
+    transition: .3s;
+
+    cursor: pointer;
+}
+.more-apps i:hover
+{
+
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+
+    transform: scale(.9);
+
+}
+
+.more-apps i:active
+{
+
+    transform: scale(1.1);
+
 }
